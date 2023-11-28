@@ -46,8 +46,6 @@ public class ElectronicsTest extends Utility {
         // Mouse Hover on “Electronics” Tab and "Cell Phone" tab
         mouseHoverToElement(By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Electronics']    "));
         clickOnElement(By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Cell phones']"));
-//        Actions actions = new Actions(driver);
-//        actions.moveToElement(electronics).moveToElement(cellPhone).click().build().perform();
 
         // Verify the text “Cell phones”
         String expectedText = "Cell phones";
@@ -93,11 +91,6 @@ public class ElectronicsTest extends Utility {
         // Mouse Hover on “Electronics” Tab and "Cell Phone" tab
         mouseHoverToElement(By.xpath("//li[@id='topcartlink']"));
         clickOnElement(By.xpath("//button[contains(text(),'Go to cart')]"));
-//        Actions action = new Actions(driver);
-//        action.moveToElement(shoppingCart).moveToElement(goToCart).click().build().perform();
-        // String expectedQ = "2";
-        // String actualQ = driver.findElement(By.xpath("//input[@value='2']")).getText();
-        // Assert.assertEquals("Quantity not verified", actualQ, expectedQ);
 
         // Verify the Total
         String expectedTotal = "$698.00";
@@ -252,9 +245,9 @@ public class ElectronicsTest extends Utility {
         Assert.assertEquals("Url not verified", expectedUrl2, currentUrl);
     }
 
-        @After
-        public void tearDown () {
-            driver.close();
+    @After
+    public void tearDown() {
+        driver.close();
 
     }
 }
